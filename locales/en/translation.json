@@ -1,0 +1,716 @@
+
+{
+  "privacyPolicy": {
+    "title": "Privacy Policy",
+    "company": "Aditya Solar Energy",
+    "effectiveDate": "Effective Date: October 12, 2025",
+    "websiteInfo": {
+      "website": "Website",
+      "email": "Contact Email"
+    },
+    "sections": {
+      "infoCollect": {
+        "title": "1. Information We Collect",
+        "intro": "We collect information you provide when using our website, such as:",
+        "points": {
+          "1": "Name, email, phone number, and address through online forms (for quotations, inquiries, or service requests).",
+          "2": "Data collected automatically via tools like Google Analytics, Facebook Pixel, and WhatsApp chat widgets, including website usage and device information."
+        },
+        "note": "We do not knowingly collect information from minors under 18 years of age."
+      },
+      "useInfo": {
+        "title": "2. How We Use Your Information",
+        "intro": "Your information is used to:",
+        "points": {
+          "1": "Provide our products and services and respond to your inquiries.",
+          "2": "Improve our website, services, and user experience.",
+          "3": "Send administrative messages, updates, and promotional offers (if you've opted in).",
+          "4": "Analyze website usage through tools like Google Analytics and Facebook Pixel."
+        },
+        "note": "We do not sell or share your personal information with third parties, except with service providers who help us operate our website or comply with the law."
+      },
+      "choicesSecurity": {
+        "title": "3. Your Choices & Security",
+        "points": {
+          "1": "You can opt-out of marketing communications anytime by contacting us at",
+          "2": "You can request access, correction, or deletion of your personal information.",
+          "3": "We take reasonable measures to protect your information, but please be aware that no method of online storage or transmission is completely secure."
+        },
+        "grievance": {
+          "title": "Grievance Officer",
+          "name": "Mr. Aditya Deshmukh",
+          "address": "Old City, Telhara, Akola, Maharashtra"
+        }
+      },
+      "updatePolicy": {
+        "title": "4. Updates to This Policy",
+        "desc": "We may update this Privacy Policy from time to time. Updates will be posted on our website, and continued use of the website constitutes acceptance of the updated policy."
+      }
+    },
+    "footer": {
+      "question": "Questions About Our Privacy Policy?",
+      "help": "We're here to help. Contact us anytime.",
+      "button": "Contact Us"
+    }
+  },
+   "adityaSolarServices": {
+    "heroSection": {
+      "title": "Book a FREE Solar Consultation",
+      "subtitle": "And save up to ₹78,000 with subsidy",
+      "rating": {
+        "text": "4.8/5 Google Rating • 10+ reviews"
+      }
+    },
+    "form": {
+      "fields": {
+        "name": {
+          "label": "Full name",
+          "placeholder": "Enter your full name"
+        },
+        "phone": {
+          "label": "WhatsApp number",
+          "placeholder": "Enter WhatsApp number"
+        },
+        "pincode": {
+          "label": "Pin code",
+          "placeholder": "Enter Pincode"
+        },
+        "bill": {
+          "label": "Average monthly bill",
+          "options": {
+            "lt1500": "Less than ₹1500",
+            "bt1500_2500": "₹1500 - ₹2500",
+            "bt2500_4000": "₹2500 - ₹4000",
+            "bt4000_8000": "₹4000 - ₹8000",
+            "gt8000": "More than ₹8000"
+          }
+        },
+        "terms": {
+          "text": "I agree to Aditya Solar's",
+          "tos": "terms of service",
+          "privacy": "privacy policy"
+        }
+      },
+      "button": "Get a FREE Quote",
+      "alert": {
+        "fillFields": "Please fill all required fields",
+        "thankYou": "Thank you! We will contact you soon."
+      }
+    },
+    "contactCards": {
+      "callNow": "Call Now",
+      "businessHours": "Business Hours",
+      "hours": "Mon-Sat: 9 AM - 6 PM"
+    },
+    "stickyFooter": {
+      "text": "Book FREE Consultation",
+      "button": "Get Quote"
+    }
+  },
+  "heroSlides": [
+    {
+      "heading1": "Switch to Solar",
+      "heading2": "Pay Less, Get More!",
+      "message": {
+        "main": "If you pay more than ₹1500/month for electricity, go solar today with zero down payment!",
+        "highlighted": "If you pay more than <highlight>₹1500/month</highlight> for electricity, go solar today with <highlight>zero down payment!</highlight>"
+      },
+      "details": [
+        "Pay just ₹1300 EMI/month for 10 years",
+        "Enjoy up to 400 units/month — worth ₹4000!",
+        "After 10 years: almost free power for 20+ years ⚡",
+        "30-year panel warranty included"
+      ]
+    },
+    {
+      "heading1": "Smart Solar Investment",
+      "heading2": "Save Big, Live Green!",
+      "message": {
+        "main": "Save up to ₹45,000 every year with smart solar investment — protect the planet and your savings!",
+        "highlighted": "Save up to <highlight>₹45,000/year</highlight> with smart solar investment — protect the planet and <highlight>your savings!</highlight>"
+      },
+      "details": [
+        "Save ₹45,000/year on electricity bills",
+        "Increase home value by up to 8%",
+        "100% maintenance-free system",
+        "Government subsidy available 🌞"
+      ]
+    },
+    {
+      "heading1": "Future-Ready Homes",
+      "heading2": "Clean Power for Generations!",
+      "message": {
+        "main": "Make your home future-ready with clean, quiet, and sustainable solar energy!",
+        "highlighted": "Make your home future-ready with <highlight>clean, quiet</highlight> and <highlight>sustainable solar energy!</highlight>"
+      },
+      "details": [
+        "30-year performance warranty",
+        "Zero noise & zero pollution",
+        "Remote system monitoring",
+        "Trusted by 10,000+ Indian families 🇮🇳"
+      ]
+    }
+  ],
+    "services": {
+    "title": "Our Key Services",
+    "subtitle": "Comprehensive solar solutions for all your energy needs",
+    "list": {
+      "installation": {
+        "title": "Solar Panel Installation",
+        "desc": "Professional installation of high-efficiency solar panels"
+      },
+      "systems": {
+        "title": "On-Grid & Off-Grid Systems",
+        "desc": "Both grid-connected and standalone solar solutions"
+      },
+      "residential": {
+        "title": "Residential & Commercial",
+        "desc": "Tailored solutions for homes and businesses"
+      },
+      "maintenance": {
+        "title": "Maintenance & Repairs",
+        "desc": "Regular maintenance and emergency repair services"
+      }
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Aditya Solar Services?",
+    "points": [
+      "Expert team with years of experience in solar installation",
+      "High-quality solar panels and equipment",
+      "Customized solutions for residential and commercial needs",
+      "Professional maintenance and repair services",
+      "On-Grid and Off-Grid system expertise",
+      "Competitive pricing and transparent quotes",
+      "Post-installation support and warranty"
+    ]
+  },
+  "contact": {
+    "title": "Contact Information",
+    "subtitle": "Get in touch with us today",
+    "phone": {
+      "label": "Phone",
+      "numbers": ["9422809337", "9284287565"]
+    },
+    "hours": {
+      "label": "Business Hours",
+      "days": "Monday - Saturday",
+      "time": "9:00 AM - 6:00 PM"
+    },
+    "callNow": "Call Now for Free Consultation"
+  },
+    "promo": {
+    "title": "Why Choose Aditya Solar Energy for Your Solar Installation",
+    "subtitle": "Get the best financing options, premium quality installations, and comprehensive support",
+    "features": {
+      "financing": {
+        "title": "Easily approval for EMI financing",
+        "desc": "We make your switch to solar affordable with our financing plans. Plus you get instant EMI approvals!"
+      },
+      "strong": {
+        "title": "Strong & Safe Solar Structures",
+        "desc": "Our solar panels are built to stay strong in all weather conditions. Each system is carefully designed by expert engineers. At Aditya Solar Energy, your safety always comes first."
+      },
+      "maintenance": {
+        "title": "5-year maintenance promise",
+        "desc": "This includes quarterly deep cleaning, health checks & repairs"
+      },
+      "subsidy": {
+        "title": "Up to ₹78,000 government subsidy",
+        "desc": "We take care of your subsidy paperwork. With us your subsidy disbursal is quick and assured."
+      }
+    },
+    "table": {
+      "system": "Solar System Size",
+      "installment": "Monthly Installment",
+      "savings": "Monthly Savings",
+      "years5": "for 5 years",
+      "years25": "for 25 years"
+    },
+    "images": {
+      "installationAlt": "Professional solar panel installation on rooftop",
+      "teamAlt": "SolarSquare service team ready to install",
+      "consultAlt": "Expert consultation with solar panel"
+    },
+    "cta": {
+      "title": "Ready to Switch to Solar?",
+      "subtitle": "Get your free consultation today and start saving on electricity bills",
+      "button": "Book Free Consultation"
+    }
+  },
+   "timeline": {
+    "title": "The solar switch made simple",
+    "subtitle": "Switching to solar can seem daunting, but we've got you covered. Here's how it works",
+    "steps": {
+      "consultation": {
+        "title": "Free in-home consultation",
+        "desc": "A Aditya Solar Energy consultant will survey your home, answer your questions and generate a custom digital design of what the solar system will look like on your roof.",
+        "button": "Schedule a free consultation"
+      },
+      "proposal": {
+        "title": "Personalised solar proposal & dedicated manager",
+        "desc": "Based on your requirements, our team will create a custom proposal for you. A Delight Manager is also assigned to answer your queries and keep you updated on the project."
+      },
+      "paperwork": {
+        "title": "Paperwork and subsidy assistance",
+        "desc": "End-to-end paperwork management by us for hassle-free coordination with the local discom and securing subsidy."
+      },
+      "installation": {
+        "title": "Step-by-step professional & safe installation",
+        "desc": "Once you submit the advance amount, your rooftop system will arrive in stylish delivery vans and installed in a timely, clean and professional manner."
+      },
+      "gridConnection": {
+        "title": "Connection to the grid",
+        "desc": "We coordinate with the discom to connect your system to the power grid and install a new electricity meter."
+      },
+      "powerOn": {
+        "title": "Power on your new system",
+        "desc": "Switch on your system to enjoy reduced electricity bills and an energy-independent future!"
+      },
+      "maintenance": {
+        "title": "Deep cleaning and maintenance",
+        "desc": "We'll call you to schedule quarterly deep cleaning and preventive health checks of your system for 5 years."
+      }
+    }
+  },
+  "FAQ" : {
+   "faq": {
+    "header": {
+      "subtitle": "Solar Energy Solutions",
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to all your solar energy questions"
+    },
+    "searchPlaceholder": "Search FAQs...",
+    "searchResults": "result{{count, plural, one {} other {s}}} found",
+    "noResults": {
+      "title": "No questions found",
+      "subtitle": "Try different keywords"
+    },
+    "footer": {
+      "title": "Still have questions?",
+      "subtitle": "Our solar experts are ready to assist you",
+      "button": "Contact Us"
+    },
+  
+    "general": [
+      {
+        "question": "What is Aditya Solar Energy?",
+        "answer": "Aditya Solar Energy designs and installs solar panel systems for homes, housing societies and businesses across Maharashtra.\n\n1. Over 3 years of dedicated experience in the solar industry.\n2. Committed to making solar energy accessible and affordable for every household and business.\n3. Mission: To drive the clean energy revolution forward, one rooftop at a time.\n4. Government-authorized vendor with all necessary certifications and registrations.\n5. Trusted partner for reliable and high-quality solar solutions.\n6. We believe solar reduces electricity costs and creates a sustainable future for generations to come."
+      },
+      {
+        "question": "What is a solar rooftop system?",
+        "answer": "A solar rooftop system is a combination of many components that convert sunlight into usable electricity.\n\nComponents include:\n1. Solar panels with PV cells\n2. Solar inverter\n3. Solar panel mounting structures\n4. AC and DC cables\n5. AC combiner box\n6. DC combiner box\n7. Earthing cables\n8. MC4 connectors"
+      },
+      {
+        "question": "How does a solar rooftop system work?",
+        "answer": "A solar rooftop system works on the principle of converting sunlight into electricity (the photovoltaic effect).\n\n1. Sunlight falls on the PV cells in the solar panel.\n2. The sunlight is converted into DC electricity.\n3. The inverter converts DC power into usable AC power.\n4. The AC electricity is fed into a bidirectional meter.\n5. It supplies power to the house.\n6. Excess power is exported to the DISCOM (grid).\n7. If solar power is insufficient, power is imported from the grid."
+      },
+      {
+        "question": "How to apply for a solar rooftop subsidy?",
+        "answer": "Under the DBT (Direct Benefit Transfer) scheme, applying for a solar rooftop subsidy is simple. Follow these steps:\n\n1. Visit the National Portal for Rooftop Solar website — https://solarrooftop.gov.in/\n2. Download and install the Sandes app from the website.\n3. Register as a customer on the Sandes app.\n4. A DISCOM official will visit your home to check technical feasibility.\n5. After approval, you’ll receive a No Objection Certificate (NOC).\n6. Choose Aditya Solar Energy as your solar installation company.\n7. Discuss project details and sign the agreement.\n8. After receiving payment, installation begins.\n9. We’ll submit a work completion report and apply for net meter installation.\n10. Receive the commissioning certificate.\n11. Upload bank details and a cancelled cheque on the National Portal.\n12. The subsidy amount will be credited to your bank account within 30 days.\n\nAditya Solar Energy assists you throughout this process to ensure a smooth and hassle-free subsidy claim."
+      },
+      {
+        "question": "What is the price of a solar system in India without a subsidy?",
+        "answer": "Aditya Solar Energy offers affordable and high-quality solar solutions.\n\nPricing for Maharashtra:\n1. 3 kW rooftop solar system: ₹1,30,000\n2. 5 kW rooftop solar system: ₹1,70,000\n\nFor other system sizes (2 kW, 4 kW, 7 kW, or 10 kW), contact us for a customized quote. We provide multiple options based on your energy requirements and budget."
+      },
+      {
+        "question": "Why should I go solar?",
+        "answer": "1. Save money on monthly electric bills.\n2. Contribute to protecting the planet by going green.\n3. Solar energy is renewable, clean, and non-polluting.\n4. Emits no greenhouse gases and mitigates climate change.\n5. With Aditya Solar Energy’s affordable pricing and quality service, solar is now accessible for all Maharashtra residents."
+      },
+      {
+        "question": "Is solar power safe?",
+        "answer": "1. The electricity produced by a solar system is the same as grid electricity — only the source differs.\n2. Solar power is among the safest sources of electricity.\n3. It is non-hazardous and does not release any toxic or harmful gases."
+      },
+      {
+        "question": "What do I need to install a rooftop solar system?",
+        "answer": "To qualify for a solar system, you need:\n1. Empty space on your roof.\n2. Access to your rooftop.\n\nProcess:\n3. Fill out the enquiry form on our website or contact us directly.\n4. Our team will visit to discuss your requirement.\n5. Once finalized, we handle design, installation, and maintenance.\n\nAditya Solar Energy, based in Telhara, Akola, serves customers across Maharashtra with prompt service."
+      },
+      {
+        "question": "What are the different types of Solar systems?",
+        "answer": "There are 3 types of solar systems:\n\n1. On-grid solar systems:\n   - Connected to the public electricity grid.\n   - Excess power is exported to the grid.\n   - Net-Metering Policy applies in Maharashtra.\n\n2. Off-grid solar systems:\n   - Not connected to the grid.\n   - Require battery storage.\n   - Designed to generate enough power even during low sunlight.\n\n3. Hybrid solar systems:\n   - Combine solar and battery storage.\n   - Store energy generated during the day for night-time use.\n   - Grid acts as backup when stored energy is depleted."
+      },
+      {
+        "question": "Do solar panels generate electricity even during monsoon and winter?",
+        "answer": "1. Yes, solar panels produce electricity even in cloudy or rainy weather.\n2. Efficiency reduces slightly, but this is accounted for in design.\n3. Even during Maharashtra’s monsoon season, panels continue to generate power."
+      },
+      {
+        "question": "Does a rooftop solar PV generate power during a power failure?",
+        "answer": "1. No, rooftop solar systems do not generate electricity during blackouts.\n2. This is to protect people repairing damaged grids.\n3. Aditya Solar Energy offers Li-ion battery storage for backup.\n4. Stored electricity can be used during the night or power failure."
+      },
+      {
+        "question": "How much electricity does a solar plant produce?",
+        "answer": "1. Depends on sunlight, plant design, and component quality.\n2. On average, 1 kW solar plant produces 4 units per day.\n3. Maharashtra’s strong sunlight makes it ideal for solar generation."
+      },
+      {
+        "question": "What kind of appliances can I use on Solar Power?",
+        "answer": "1. Can power both heavy industrial machines and home appliances.\n2. Electricity is synchronized with grid/diesel generators.\n3. Ensures no voltage fluctuations regardless of usage."
+      },
+      {
+        "question": "How do I decide what size of plant I need?",
+        "answer": "The size depends on:\n1. Your electricity consumption.\n2. Available shadow-free area.\n3. Solar irradiation in your area.\n\nAditya Solar Energy conducts an assessment to recommend the best size for maximum savings."
+      },
+      {
+        "question": "What is Net metering?",
+        "answer": "1. Net Metering allows solar owners to earn credits for power added to the grid.\n2. Excess power sent to the grid can be taken back when needed.\n3. The bi-directional meter runs backward when excess power is exported.\n4. You are billed only for the net power used.\n5. Available for both residential and commercial consumers in Maharashtra."
+      }
+    ],
+    "maintenance": [
+      {
+        "question": "What is the life of a rooftop solar system?",
+        "answer": "1. The solar plant’s lifespan is 25 years.\n2. Solar panels: 25-year warranty.\n3. Inverters: 5–12-year warranty.\n4. Aditya Solar Energy uses high-quality components for long-term efficiency."
+      },
+      {
+        "question": "Do Solar Rooftop projects have a high maintenance cost?",
+        "answer": "1. No, solar systems have very low maintenance costs.\n2. Minimal moving parts reduce maintenance needs.\n3. Aditya Solar Energy provides 5 years of free maintenance."
+      },
+      {
+        "question": "Can Solar projects damage my roof?",
+        "answer": "1. No, Aditya Solar Energy ensures no damage during installation.\n2. We use non-penetrating structures and waterproofing methods.\n3. We are government-authorized with proper certifications."
+      },
+      {
+        "question": "Do I need to clean my Solar plant?",
+        "answer": "1. Clean the panels 1–2 times a month.\n2. Best time: early morning or night.\n3. Use a clean wet cloth, nylon brush, or sponge.\n4. Avoid detergents or metal brushes.\n5. During the 5-year free maintenance period, our team assists with cleaning."
+      },
+      {
+        "question": "My roof is not made of concrete; can I still install a Solar Project?",
+        "answer": "1. Yes, solar can be installed on almost any roof type.\n2. For brittle materials like asbestos, we provide safe solutions.\n3. Aditya Solar Energy ensures secure installation for all roof types."
+      }
+    ],
+    "economics": [
+      {
+        "question": "How much does a solar Plant cost?",
+        "answer": "Pricing at Aditya Solar Energy (after subsidy):\n\n1. 3 kW rooftop system: ₹1,12,000\n2. 5 kW rooftop system: ₹1,67,000\n\nIncludes:\n3. High-quality components\n4. Professional installation\n5. 5 years of free maintenance"
+      },
+      {
+        "question": "What is the break-even period for Solar rooftop projects?",
+        "answer": "1. Typical breakeven: 3–5 years.\n2. Project life: 25 years.\n3. You start saving from day one.\n4. Aditya Solar Energy ensures quick ROI through affordable installation."
+      },
+      {
+        "question": "Are there any subsidies provided by the government for solar projects?",
+        "answer": "1. No subsidies for commercial entities.\n2. Residential rooftop projects in Maharashtra receive subsidies within 30 days.\n3. Aditya Solar Energy assists with the entire subsidy process.\n\nSubsidy slabs:\n────────────────────────────\nSegment          | Size | Subsidy\n────────────────────────────\nIndividual house | 1kW  | ₹30,000\nIndividual house | 2kW  | ₹60,000\nIndividual house | 3kW+ | ₹78,000\n────────────────────────────\n\nWe guide you through every step, ensuring a hassle-free claim."
+      },
+      {
+        "question": "What is the difference between CapEx and OpEx models?",
+        "answer": "1. CapEx Model:\n   - Consumer invests the full amount.\n   - Solar EPC company installs and maintains the system.\n   - Ownership lies with the consumer.\n\n2. OpEx Model:\n   - Investor/developer invests in the system.\n   - Consumer pays only for energy used (via PPA agreement).\n   - Suitable for users wanting zero upfront cost.\n\nAditya Solar Energy helps you choose the best model for your needs."
+      },
+      {
+        "question": "Are financing options available for Solar Rooftop projects?",
+        "answer": "Yes, Aditya Solar Energy provides attractive EMI options.\n\n1. Interest Rate: 6% per annum\n2. Repayment Period: Up to 10 years\n3. Minimal documentation required\n4. Start saving immediately while paying in easy monthly installments.\n5. Savings on electricity often cover the EMI amount."
+      }
+    ]
+  }
+},
+"SolarBuyingguid2" : {
+  "Content" : {
+"faqs": [
+    {
+      "question": "Does on-grid solar need a battery?",
+      "answer": "No. That's the beauty of installing an on-grid solar system. It does not require a battery connection like off-grid and hybrid solar systems, which makes it easier to maintain and the most affordable option of the three types."
+    },
+    {
+      "question": "Do solar panels work at night?",
+      "answer": "No. Solar panels generate electricity when photons from sunlight knock electrons loose in the PV cells. At night, an on-grid solar system draws power from the grid to keep a house running."
+    },
+    {
+      "question": "What is the difference between on-grid and hybrid solar systems?",
+      "answer": "The main difference is that a hybrid system is connected to the grid and batteries, while an on-grid solar system is connected only to the grid."
+    },
+    {
+      "question": "What is the on-grid solar panel price in India?",
+      "answer": "The prices vary based on the type of solar panels. For instance, the latest technology, MonoPERC half-cut solar panels in India, cost Rs. 24 per watt."
+    }
+  ],
+  "advantages": {
+    "adv1": {
+      "title": "Energy Production Monitoring",
+      "desc": "It's easy to keep a track of the units of electricity that your solar system generated",
+      "icon": "adv1"
+    },
+    "adv2": {
+      "title": "Simplified Solar Billing",
+      "desc": "It's easier to understand the solar electricity bill",
+      "icon": "adv2"
+    },
+    "adv3": {
+      "title": "Rapid Payback & Decades of Free Power",
+      "desc": "Once the solar on-grid system's price breaks even in 3 to 5 years, you get free solar electricity for the next 20-22 years",
+      "icon": "adv3"
+    },
+    "adv4": {
+      "title": "Significant Monthly Savings",
+      "desc": "The monthly electricity bill reduces substantially",
+      "icon": "adv4"
+    },
+    "adv5": {
+      "title": "No Battery Requirement",
+      "desc": "Your grid plays the role of the battery. The system will directly supply excess units to the grid and take them back when needed",
+      "icon": "adv5"
+    },
+    "adv6": {
+      "title": "No Battery Replacement Costs",
+      "desc": "Since there's no battery, there are no battery replacement charges involved",
+      "icon": "adv6"
+    },
+    "adv7": {
+      "title": "Most Affordable Solar Option",
+      "desc": "Out of the 3 types of solar systems, the on-grid solar system for homes is the most affordable option",
+      "icon": "adv7"
+    },
+    "adv8": {
+      "title": "Exclusive Solar Subsidy",
+      "desc": "The government offers a subsidy only on an on-grid solar system for residential homes (that use DCR panels)",
+      "icon": "adv8"
+    }
+  },
+  "installationSteps": {
+    "step1": {
+      "step": 1,
+      "title": "Rooftop Inspection and Site Assessment",
+      "desc": "A trained engineer surveys your rooftop to map shadow-casting objects and determine the optimal panel orientation (usually south in India) and tilt angle (approximately equal to your latitude). This analysis maximizes sunlight exposure and long-term energy yield."
+    },
+    "step2": {
+      "step": 2,
+      "title": "Roof Mounting and Panel Clamping",
+      "desc": "Mounting structures are securely fixed to your roof using corrosion-protected rails and fasteners. Panels are then clamped onto these rails, following the manufacturer's torque specifications to prevent damage."
+    },
+    "step3": {
+      "step": 3,
+      "title": "Inverter Installation & Electrical Wiring",
+      "desc": "Solar strings (series-connected panels) are routed to the DC combiner box, then to the inverter, which converts DC into grid-compatible AC. AC output is channeled through an AC combiner box to your bi-directional meter, with all cables protected in conduit or trays."
+    },
+    "step4": {
+      "step": 4,
+      "title": "Earthing & Lightning Protection",
+      "desc": "Dedicated earthing rods and cables bond both DC and AC components to the ground, safeguarding against electrical faults. A lightning arrester mounted above the panels intercepts strikes and diverts surge energy safely to the earthing grid."
+    },
+    "step5": {
+      "step": 5,
+      "title": "System Commissioning & Monitoring Setup",
+      "desc": "Technicians verify string voltages, phase sequence, and inverter settings before energizing the system. Finally, the inverter is linked to your Wi-Fi for real-time performance monitoring, ensuring any issues are spotted and resolved promptly."
+    }
+  },
+  
+  "components": {
+    "comp1": {
+      "icon": "comp1",
+      "title": "Solar Panels",
+      "description": "Solar panels are the most visible part of the solar system. They're installed on the rooftop, facing the South direction. When sunlight falls on these panels, they absorb that sunlight and convert it into electricity.",
+      "note": "Solar electricity directly from the panels is DC power. Since homes require alternating current (AC), a solar inverter is needed to convert direct current into AC."
+    },
+
+    "comp2": {
+      "icon": "comp2",
+      "title": "Solar Inverter",
+      "description": "Without a solar inverter, the entire solar system would have been an impractical model. The solar inverter converts DC into AC.",
+      "note": "This conversion is essential because that's the only way to convert electricity generated from an on-grid solar system into a usable form (AC) that can run household appliances."
+    },
+
+    "comp3": {
+      "icon": "comp3",
+      "title": "Solar Module Mounting Structures",
+      "description": "These are the pillars that support solar panels. They must be of a standard grade so that they can withstand heavy winds during storms and cyclones and hold the weight of the solar panels for 25 years (that's the life of a solar system).",
+      "features": [
+        "Withstand wind speeds as high as 170 kmph",
+        "Prevent rusting for years because they have a high-density galvanized iron (HDGI) coating of 80 microns to withstand corrosion."
+      ]
+    },
+
+    "comp4": {
+      "icon": "comp4",
+      "title": "Solar Accessories",
+      "description": "They might not sound that important in the entire setup, but solar accessories are as important as a panel, an inverter, or a mounting structure.",
+      "accessories": [
+        {
+          "name": "AC and DC cables",
+          "desc": "They are required for wiring solar panels and connecting different parts to make the entire solar grid functional."
+        },
+        {
+          "name": "DC combiner boxes",
+          "desc": "A DC combiner box works like an isolation box. All the cables carrying DC current from the panels are isolated in this box. DC power coming from the panels can be as high as 1,000 volts, even more. It's dangerous (potentially lethal); hence, a DC combiner box is required. This box feeds the DC current into the solar inverter and the solar inverter produces alternating current."
+        },
+        {
+          "name": "AC combiner boxes",
+          "desc": "The AC power from the solar inverter is fed into an AC combiner box (all cables carrying the AC current from multiple inverters are combined in this box)."
+        },
+        {
+          "name": "Earthing strips and wires",
+          "desc": "Once the entire on-grid solar system is set up, earthing is done using earthing strips and wires."
+        }
+      ]
+    },
+
+    "comp5": {
+      "icon": "comp5",
+      "title": "Bi-directional Meter",
+      "description": "Also known as a net meter, the bi-directional meter is basically designed to keep a track of electricity supplied to the grid and electricity imported from the grid.",
+      "note": "An on-grid solar system will not become functional until and unless the regular meter is replaced with a bidirectional meter."
+    }
+  },
+  "workingSteps": {
+    "step1": {
+      "title": "Solar Energy Capture and DC Power Generation",
+      "content": "Solar panels, composed of photovoltaic (PV) cells, absorb photons from sunlight and free electrons within the cell's semiconductor material. This movement of electrons generates a direct current (DC). The total DC output depends on factors such as panel efficiency, sunlight intensity, and shading. Needless to say, higher irradiance yields more current."
+    },
+    "step2": {
+      "title": "DC-to-AC Conversion via the Solar Inverter",
+      "content": "The inverter is the heart of your solar system. It takes the panel-generated DC and inverts it into alternating current (AC), matching the frequency (50 Hz in India) and voltage of the local grid. Modern inverters also perform maximum power point tracking (MPPT) to continually adjust voltage/current inputs, extracting the highest possible power from your panels."
+    },
+    "step3": {
+      "title": "Bidirectional Meter Integration",
+      "content": "Once converted to grid-compliant AC, the electricity flows through a bi-directional (net) meter. This meter precisely records both incoming units drawn from the grid and outgoing units exported from your solar system, ensuring you're billed only for the net energy you consume."
+    },
+    "step4": {
+      "title": "Household Consumption of Solar-Generated AC",
+      "content": "During the day, your home's appliances, such as lights, fans, fridges, air conditioners, and electronics, draw AC power directly from the inverter output. Because solar power is typically the first source used, it reduces or altogether replaces the need to import electricity from the grid."
+    },
+    "step5": {
+      "title": "Exporting Excess Solar Power",
+      "content": "If your panels produce more electricity than your household consumes at any moment, the surplus AC automatically travels back through the bi-directional meter into the grid. Your meter records these exported units, which may earn you financial credit or feed-in benefits under your local net-metering policy."
+    },
+    "step6": {
+      "title": "Importing Grid Power When Needed",
+      "content": "After sunset or during low-sunlight periods when it's cloudy, the bi-directional meter switches to import mode if your solar output drops below your home's demand. It draws the shortfall from the grid, using up any previously accrued credits first, so your appliances continue running seamlessly without interruption."
+    }
+  }
+}
+  },
+"SolarBuyingguid": {
+    "hero": {
+      "title": "On-Grid Solar System Buying Guide",
+      "subtitle": "Prices, Subsidy, Advantages and Disadvantages Disclosed"
+    },
+    "overview": {
+      "heading": "Overview of On-Grid Solar Systems",
+      "para1": "An on-grid solar system, also known as a grid-tied system, is directly connected to the main electricity grid. In Maharashtra, homeowners installing a rooftop on-grid solar system can avail government subsidies under the PM-Surya Ghar Muft Bijli Yojana. Subsidy amounts generally range between Rs. 30,000 and Rs. 78,000 depending on the system capacity and eligibility criteria.",
+      "priceExamplesTitle": "Price Examples:",
+      "priceExample1": "3 kW on-grid solar system price in Maharashtra with subsidy: ~ Rs. 1,12,000 – Rs. 1,20,000",
+      "priceExample2": "5 kW on-grid solar system price in Maharashtra with subsidy: ~ Rs. 2,07,000 – Rs. 2,20,000",
+      "note": "*Please note: These prices are approximate for Maharashtra as of 16th November 2025. Final cost may vary based on city, DISCOM requirements (MSEDCL, BEST, TATA Power), panel type, installation site, and other applicable charges."
+    },
+    "whatIs": {
+      "heading": "What is an On-grid Solar System?",
+      "para1": "An on-grid solar system (grid-tied) connects directly to the utility grid through a bi-directional meter (net meter). Most Indian homes with a reliable grid connection choose on-grid solar since this system is powerful enough to support all household energy requirements.",
+      "para2": "The on-grid solar system is a careful compilation of many components, listed below, arranged together to convert sunlight into electricity:",
+      "list": [
+        "Solar Panels",
+        "A solar inverter",
+        "Solar module mounting structures",
+        "A bi-directional meter",
+        "Solar accessories (AC and DC cables, AC and DC combiner boxes, conduit trays, lightning arrester, MC4 connectors)"
+      ]
+    },
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "When maintained properly, an on-grid solar system can last for 25 years. Contrary to popular belief, cleaning your panels with sprinklers can actually damage them. To keep your system operating at its peak efficiency, be sure to sign up for professional after-sales services."
+    },
+    "componentsSection": {
+      "heading": "What Are the On-Grid Solar System Components?",
+      "intro": "Here's a breakdown of how every single component in an on-grid solar system comes together to power your home.",
+      "didYouKnowTitle": "Did you know?",
+      "mountingStructurePara1": "The best solar module mounting structures are prefabricated in precision labs. They're coated with hot-dip galvanizing on steel to make them rust-proof."
+    },
+    "mountingFeatures": [
+      "Resist high wind loads and reduce vibration",
+      "Provide easy height & tilt adjustments",
+      "Ensure corrosion-free performance for decades"
+    ],
+    "accessoriesNote": "Please note: all the DC cable connections are made using MC4 connectors.",
+    "netMetering": {
+      "heading": "How Net Metering Helps",
+      "para1": "The net meter helps the discom track the power generated by the solar system, the power consumed, the power supplied to the grid, and the power imported.",
+      "para2": "At the end of every month, when the electricity bill is generated, the readings from the bidirectional meter give an account of:",
+      "list": [
+        "How many units were supplied to the grid",
+        "How many units were taken from the grid"
+      ],
+      "ifSupplyMore": "If you supply more units to the grid than you consumed: Those units will be deducted from your bill. It will reduce the bill further.",
+      "ifUseExtra": "If you use extra units from the grid: Those units would be added to your bill in addition to what your solar plant generated."
+    },
+    "howItWorks": {
+      "heading": "How Does an On-grid Solar System Work?",
+      "introPara": "Now you've seen how multiple on-grid solar system components come together, it makes sense to break down the process of sunlight getting converted into electricity.",
+      "boldHeading": "Here's how an on-grid solar system works:"
+    },
+    "subsidySection": {
+      "heading": "Solar Subsidy For On-Grid System",
+      "para": "The Indian government offers a subsidy when you install an on-grid solar system for home. This subsidy remains the same for all states in India.",
+      "table": {
+        "headers": {
+          "size": "Solar System Size",
+          "subsidy": "Solar Subsidy (PM Surya Ghar)"
+        },
+        "rows": [
+          { "size": "1 kWp", "subsidy": "Rs. 30,000" },
+          { "size": "2 kWp", "subsidy": "Rs. 60,000" },
+          { "size": "3 kWp and higher", "subsidy": "Rs. 78,000" }
+        ]
+      }
+    },
+    "advantages": {
+      "heading": "Advantages of On-Grid Solar System"
+    },
+    "limitations": {
+      "heading": "Limitation of On-Grid Solar System",
+      "powerOutagesTitle": "Power Outages",
+      "powerOutagesPara": "Although connection with the grid is a sure benefit, it's also a limitation. When there's a power cut from the grid, the on-grid solar system automatically shuts down. This interruption in the supply of power is known as a power outage.",
+      "antiIslandingTitle": "Anti-Islanding Protection",
+      "antiIslandingPara": "The main reason an on-grid solar inverter is designed to automatically shut down if the grid fails is to eliminate safety risks. This feature protects electrical maintenance personnel from electric shocks while working on the grid."
+    },
+    "comparisonBox": {
+      "title": "So, which is better: off-grid or on-grid?",
+      "para": "Hands down, on-grid solar systems in urban areas with a reliable grid are unbeatable for meeting a home's power requirements.",
+      "bullets": [
+        "No costs related to battery upkeep",
+        "More affordable than an off-grid solar system",
+        "Government offers subsidy on on-grid systems, not off-grid"
+      ],
+      "conclusion": "✅ If your power grid is reliable, investing in an on-grid solar system is the smarter choice!"
+    },
+    "installation": {
+      "heading": "How to Install an On-Grid Solar System at Home?",
+      "importantNoteTitle": "⚠️ Important Note:",
+      "importantNotePara": "Installing rooftop solar is NOT a DIY task. You must leave it in the hands of experts because it's critical to identify rooftop capacity, determine shadow-free areas, set optimal tilt angles, and carry out safe installation."
+    },
+    "whyChoose": {
+      "heading": "Why Choose Aditya Solar Energy?",
+      "tagline": "Making your journey from expensive electricity to free solar power easy!",
+      "features": {
+        "zeroInvestment": {
+          "title": "💰 Zero-Investment Solar Scheme",
+          "desc": "Easy loans and financing options where government subsidy offsets initial down payment. EMI schedules from 3 to 120 months available."
+        },
+        "swiftInstallation": {
+          "title": "⚡ Swift Installation",
+          "desc": "No middlemen involved. Complete system setup executed by our team in 8 hours."
+        },
+        "afterSales": {
+          "title": "🛠️ Solid After-Sales Support",
+          "desc": "Minimum 45 maintenance visits over 5 years for deep cleaning and preventive checks."
+        },
+        "leakageGuarantee": {
+          "title": "🛡️ Leakage-Free Guarantee",
+          "desc": "HILTI AirTight chemical anchoring protects your roof. Rs. 1 lakh guarantee for 1 year."
+        },
+        "moneyBack": {
+          "title": "💵 Money-Back Guarantee",
+          "desc": "First and only solar company in India to offer money-back guarantee at Rs. 8 per unit if we fall short on promised generation."
+        }
+      }
+    },
+    "faqs": {
+      "heading": "Frequently Asked Questions"
+    },
+    "conclusion": {
+      "heading": "Conclusion",
+      "para1": "Installing an on-grid solar system is a big decision, and it's your right to be critical about it. When you choose the right quality components, a system you install today can last for at least 25 years.",
+      "para2": "The solar panel installation cost in India varies from city to city, and you should trust a company that's highly rated by customers.",
+      "final": "☀️ The Indian government subsidy is available only till they meet the target of solarizing 1 crore homes under PM Surya Ghar Muft Bijli Yojana. Go solar now and get freedom from paying for electricity!"
+    },
+    "css": {
+      "fadeInKeyframes": "@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }",
+      "animateClass": ".animate-fadeIn { animation: fadeIn 0.3s ease-out; }"
+    }
+  }
+
+}
+

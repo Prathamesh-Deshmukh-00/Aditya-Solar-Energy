@@ -11,7 +11,8 @@ import {
   OnGridSolarSystem,
   Services,
   HeroScrollContent,
-  VideoCarousel
+  VideoCarousel,
+  CustomAlert
 } from "./index.js";
 
 export default function AdityaSolarServices({ setClick, setTermuse }) {
@@ -24,7 +25,19 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
     bill: ''
   });
   const [showStickyFooter, setShowStickyFooter] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [alertState, setAlertState] = useState({
+    isOpen: false,
+    type: 'info',
+    message: ''
+  });
+
   const { t } = useTranslation();
+
+  const showAlert = (type, message) => {
+    setAlertState({ isOpen: true, type, message });
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -46,13 +59,60 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
     { value: '>8000', label: t('adityaSolarServices.form.fields.bill.options.gt8000') }
   ];
 
-  const handleSubmit = () => {
-    if (!formData.name || !formData.phone || !formData.service || !formData.bill) {
-      alert(t('adityaSolarServices.form.alert.fillFields'));
+  const handleNumberInput = (e, field) => {
+    const value = e.target.value.replace(/\D/g, '');
+    // Limit to 10 digits for phone
+    if (field === 'phone' && value.length > 10) return;
+    setFormData({ ...formData, [field]: value });
+  };
+
+  const handleSubmit = async () => {
+    // Validate terms
+    if (!termsAccepted) {
+      showAlert('warning', "Please agree to the Terms of Service & Privacy Policy to proceed.");
       return;
     }
-    alert(t('adityaSolarServices.form.alert.thankYou'));
-    setFormData({ name: '', phone: '', pincode: '', service: '', bill: '' });
+
+    // Validate required fields
+    if (!formData.name || !formData.phone || !formData.bill) {
+      showAlert('warning', t('adityaSolarServices.form.alert.fillFields'));
+      return;
+    }
+
+    // Validate Indian Phone Number
+    const indianPhoneRegex = /^[6-9]\d{9}$/;
+    if (!indianPhoneRegex.test(formData.phone)) {
+      showAlert('warning', "Please enter a valid 10-digit Indian mobile number (starts with 6-9).");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
+
+      // Success
+      showAlert('success', t('adityaSolarServices.form.alert.thankYou'));
+      setFormData({ name: '', phone: '', pincode: '', service: '', bill: '' });
+      setTermsAccepted(false);
+    } catch (error) {
+      console.error('Submission error:', error);
+      showAlert('error', 'Failed to submit inquiry. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -124,7 +184,7 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                   <input
                     type="tel"
                     value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                    onChange={(e) => handleNumberInput(e, 'phone')}
                     className="w-full px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm"
                     placeholder={t('adityaSolarServices.form.fields.phone.placeholder')}
                   />
@@ -138,7 +198,7 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                   <input
                     type="text"
                     value={formData.pincode}
-                    onChange={(e) => setFormData({ ...formData, pincode: e.target.value })}
+                    onChange={(e) => handleNumberInput(e, 'pincode')}
                     className="w-full px-3 py-2 sm:px-4 sm:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none text-sm"
                     placeholder={t('adityaSolarServices.form.fields.pincode.placeholder')}
                   />
@@ -157,11 +217,10 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                       <button
                         key={range.value}
                         onClick={() => setFormData({ ...formData, bill: range.value })}
-                        className={`px-2 sm:px-3 py-2 rounded-lg border text-xs sm:text-sm font-medium text-left transition ${
-                          formData.bill === range.value
-                            ? 'border-blue-600 bg-blue-50 text-blue-700'
-                            : 'border-gray-300 bg-white text-gray-700 hover:border-blue-300'
-                        }`}
+                        className={`px-2 sm:px-3 py-2 rounded-lg border text-xs sm:text-sm font-medium text-left transition ${formData.bill === range.value
+                          ? 'border-blue-600 bg-blue-50 text-blue-700'
+                          : 'border-gray-300 bg-white text-gray-700 hover:border-blue-300'
+                          }`}
                       >
                         {range.label}
                       </button>
@@ -175,6 +234,8 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                     type="checkbox"
                     id="terms"
                     className="mt-1 w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    checked={termsAccepted}
+                    onChange={(e) => setTermsAccepted(e.target.checked)}
                     required
                   />
                   <label htmlFor="terms" className="text-xs text-gray-600 leading-snug">
@@ -192,9 +253,11 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                 {/* Submit */}
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-blue-900 to-blue-800 text-white font-bold py-3 sm:py-3.5 rounded-full hover:shadow-xl transform hover:scale-[1.02] transition text-sm sm:text-base"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-blue-900 to-blue-800 text-white font-bold py-3 sm:py-3.5 rounded-full hover:shadow-xl transform hover:scale-[1.02] transition text-sm sm:text-base ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                    }`}
                 >
-                  {t('adityaSolarServices.form.button')}
+                  {isSubmitting ? 'Submitting...' : t('adityaSolarServices.form.button')}
                 </button>
               </div>
             </div>
@@ -230,6 +293,14 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
           </div>
         </div>
       )}
+
+      {/* Styled Alert Popup */}
+      <CustomAlert
+        isOpen={alertState.isOpen}
+        type={alertState.type}
+        message={alertState.message}
+        onClose={() => setAlertState({ ...alertState, isOpen: false })}
+      />
     </div>
   );
 }

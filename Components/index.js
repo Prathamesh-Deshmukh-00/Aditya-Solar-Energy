@@ -11,6 +11,7 @@ import OnGridSolarSystem from "./genralInfo.jsx";
 import Services from "./Services.jsx";
 import ContactUs from "./ContactUs.jsx";
 import HeroScrollContent from "./AutoScrollSection.jsx";
-import VideoCarousel  from "./VideoCarousel.jsx";
+import VideoCarousel from "./VideoCarousel.jsx";
+import CustomAlert from "./CustomAlert.jsx";
 
-export {AdityaSolarServices ,PrivacyPolicy,TermsOfUse,ContactUs, SolarSquarePromo, ModernSolarFAQ , Footer ,Header,SolarTimeline,SolarBuyingGuide,OnGridSolarSystem,Services,HeroScrollContent, VideoCarousel };
+export { AdityaSolarServices, PrivacyPolicy, TermsOfUse, ContactUs, SolarSquarePromo, ModernSolarFAQ, Footer, Header, SolarTimeline, SolarBuyingGuide, OnGridSolarSystem, Services, HeroScrollContent, VideoCarousel, CustomAlert };

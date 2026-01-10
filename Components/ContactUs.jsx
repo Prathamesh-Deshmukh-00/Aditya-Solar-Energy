@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Send, Sun, Clock, Zap, Menu, X, Home, Info, Briefcase, PhoneCall } from 'lucide-react';
-import {ModernSolarFAQ} from "./index.js";
+import { ModernSolarFAQ, CustomAlert } from "./index.js";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -10,9 +10,17 @@ export default function ContactUs() {
     messageType: 'service',
     description: ''
   });
-  
-  const [submitted, setSubmitted] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [alertState, setAlertState] = useState({
+    isOpen: false,
+    type: 'info',
+    message: ''
+  });
+
+  const showAlert = (type, message) => {
+    setAlertState({ isOpen: true, type, message });
+  };
 
   const handleChange = (e) => {
     setFormData({
@@ -21,25 +29,70 @@ export default function ContactUs() {
     });
   };
 
-  const handleSubmit = () => {
-    if (formData.name && formData.email && formData.mobile && formData.description) {
-      setSubmitted(true);
-      setTimeout(() => {
-        setSubmitted(false);
-        setFormData({
-          name: '',
-          email: '',
-          mobile: '',
-          messageType: 'service',
-          description: ''
-        });
-      }, 3000);
+  const handleNumberInput = (e) => {
+    const value = e.target.value.replace(/\D/g, '');
+    if (value.length > 10) return;
+    setFormData({ ...formData, mobile: value });
+  };
+
+  const handleSubmit = async () => {
+    // Validate required fields
+    if (!formData.name || !formData.email || !formData.mobile || !formData.description) {
+      showAlert('warning', "All fields are required. Please fill in all details.");
+      return;
+    }
+
+    // Validate Email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      showAlert('warning', "Please enter a valid email address.");
+      return;
+    }
+
+    // Validate Indian Phone Number
+    const mobileRegex = /^[6-9]\d{9}$/;
+    if (!mobileRegex.test(formData.mobile)) {
+      showAlert('warning', "Please enter a valid 10-digit Indian mobile number (starts with 6-9).");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
+
+      // Success
+      showAlert('success', "Your inquiry has been submitted successfully!");
+      setFormData({
+        name: '',
+        email: '',
+        mobile: '',
+        messageType: 'service',
+        description: ''
+      });
+    } catch (error) {
+      console.error('Submission error:', error);
+      showAlert('error', 'Failed to submit inquiry. Please try again later.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-  
+
 
       {/* Hero Banner */}
       <div className="relative bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
@@ -48,7 +101,7 @@ export default function ContactUs() {
             backgroundImage: 'url("data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="1"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
           }}></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 py-10 sm:py-12 lg:py-20">
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-3">Get In Touch</h2>
@@ -59,10 +112,10 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
-        
+
         <div className="absolute bottom-0 left-0 right-0">
           <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
-            <path d="M0 80L60 70C120 60 240 40 360 30C480 20 600 20 720 25C840 30 960 40 1080 45C1200 50 1320 50 1380 50L1440 50V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F9FAFB"/>
+            <path d="M0 80L60 70C120 60 240 40 360 30C480 20 600 20 720 25C840 30 960 40 1080 45C1200 50 1320 50 1380 50L1440 50V80H1380C1320 80 1200 80 1080 80C960 80 840 80 720 80C600 80 480 80 360 80C240 80 120 80 60 80H0Z" fill="#F9FAFB" />
           </svg>
         </div>
       </div>
@@ -70,7 +123,7 @@ export default function ContactUs() {
       {/* Main Content */}
       <main className="flex-grow max-w-7xl mx-auto px-4 py-6 sm:py-8 lg:py-12 w-full">
         <div className="grid lg:grid-cols-2 gap-6 lg:gap-8">
-             {/* Left Column - Inquiry Form */}
+          {/* Left Column - Inquiry Form */}
           <div className="lg:top-24 h-fit">
             <div className="bg-white rounded-xl sm:rounded-2xl shadow-xl p-5 sm:p-6 lg:p-8 border border-gray-100">
               <div className="mb-5 sm:mb-6">
@@ -82,13 +135,6 @@ export default function ContactUs() {
                 </h3>
                 <p className="text-gray-600 text-sm sm:text-base">We'll respond within 24 hours</p>
               </div>
-
-              {submitted && (
-                <div className="bg-gradient-to-r from-green-50 to-emerald-50 border-2 border-green-400 text-green-800 px-4 py-3 sm:py-4 rounded-xl mb-5 sm:mb-6 shadow-sm">
-                  <p className="font-semibold text-sm sm:text-base">✓ Success!</p>
-                  <p className="text-xs sm:text-sm">Your inquiry has been submitted.</p>
-                </div>
-              )}
 
               <div className="space-y-4 sm:space-y-5">
                 <div>
@@ -127,7 +173,7 @@ export default function ContactUs() {
                     type="tel"
                     name="mobile"
                     value={formData.mobile}
-                    onChange={handleChange}
+                    onChange={handleNumberInput}
                     className="w-full px-3 sm:px-4 py-2.5 sm:py-3 border-2 border-gray-200 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition text-sm sm:text-base"
                     placeholder="10-digit mobile number"
                   />
@@ -164,10 +210,18 @@ export default function ContactUs() {
 
                 <button
                   onClick={handleSubmit}
-                  className="w-full bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white font-bold py-3 sm:py-4 px-6 rounded-lg sm:rounded-xl hover:from-orange-600 hover:via-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-sm sm:text-base"
+                  disabled={isSubmitting}
+                  className={`w-full bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-500 text-white font-bold py-3 sm:py-4 px-6 rounded-lg sm:rounded-xl hover:from-orange-600 hover:via-yellow-600 hover:to-orange-600 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-sm sm:text-base ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                    }`}
                 >
-                  <Send className="w-4 h-4 sm:w-5 sm:h-5" />
-                  Submit Inquiry
+                  {isSubmitting ? (
+                    'Sending...'
+                  ) : (
+                    <>
+                      <Send className="w-4 h-4 sm:w-5 sm:h-5" />
+                      Submit Inquiry
+                    </>
+                  )}
                 </button>
               </div>
             </div>
@@ -176,7 +230,7 @@ export default function ContactUs() {
           {/* Right Column - Contact Info & Map */}
           <div className="space-y-6">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-800">Contact Information</h3>
-            
+
             <div className="space-y-4">
               {/* Phone Card */}
               <div className="bg-white rounded-xl sm:rounded-2xl shadow-lg p-4 sm:p-6 hover:shadow-xl transition-shadow border border-gray-100">
@@ -241,41 +295,46 @@ export default function ContactUs() {
               </div>
             </div>
 
-          
+
           </div>
 
-         
+
         </div>
-{/* Google Map */}
-<div className="bg-white mt-10 h-60 sm:h-80 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-  <div className="p-3 sm:p-4 bg-gradient-to-r from-orange-500 to-yellow-500">
-    <h4 className="font-semibold text-white text-base sm:text-lg flex items-center gap-2">
-      <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
-      Our Location
-    </h4>
-  </div>
-  <div className="relative w-full h-full">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d70436.43592912049!2d76.78887563043867!3d21.030297351475575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAyJzM3LjIiTiA3NsKwNTAnNDcuMyJF!5e0!3m2!1sen!2sin!4v1760686481183!5m2!1sen!2sin"
-      className="absolute top-0 left-0 w-full h-full"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-    />
-  </div>
-</div>
+        {/* Google Map */}
+        <div className="bg-white mt-10 h-60 sm:h-80 rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-gray-100">
+          <div className="p-3 sm:p-4 bg-gradient-to-r from-orange-500 to-yellow-500">
+            <h4 className="font-semibold text-white text-base sm:text-lg flex items-center gap-2">
+              <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+              Our Location
+            </h4>
+          </div>
+          <div className="relative w-full h-full">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d70436.43592912049!2d76.78887563043867!3d21.030297351475575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAyJzM3LjIiTiA3NsKwNTAnNDcuMyJF!5e0!3m2!1sen!2sin!4v1760686481183!5m2!1sen!2sin"
+              className="absolute top-0 left-0 w-full h-full"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
 
 
 
 
       </main>
 
-      
-             {/* Freqreltly asked questions  */}
-             <ModernSolarFAQ/>
 
+      {/* Freqreltly asked questions  */}
+      <ModernSolarFAQ />
 
+      <CustomAlert
+        isOpen={alertState.isOpen}
+        type={alertState.type}
+        message={alertState.message}
+        onClose={() => setAlertState({ ...alertState, isOpen: false })}
+      />
     </div>
   );
 }

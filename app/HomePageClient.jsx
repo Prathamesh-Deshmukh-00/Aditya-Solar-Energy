@@ -1,6 +1,6 @@
 "use client";
 
-import { LandingPage } from "../Pages/LandingPage.jsx";
+import { LandingPage } from "../PageComponents/LandingPage.jsx";
 
 export default function HomePageClient() {
   return <LandingPage />;

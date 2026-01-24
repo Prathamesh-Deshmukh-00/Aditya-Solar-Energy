@@ -12,7 +12,8 @@ import {
   Services,
   HeroScrollContent,
   VideoCarousel,
-  CustomAlert
+  CustomAlert,
+  WhyChooseUsImageCarousel
 } from "./index.js";
 
 export default function AdityaSolarServices({ setClick, setTermuse }) {
@@ -152,8 +153,9 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
               </div>
             </div>
 
-            {/* Right Section - Form */}
-            <div id="hero-form" className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-5 sm:p-6 md:p-8">
+            {/* Right Section Wrapper */}
+            <div className="flex flex-col gap-6 sm:gap-8">
+              <div id="hero-form" className="bg-white rounded-xl sm:rounded-2xl shadow-lg sm:shadow-2xl p-5 sm:p-6 md:p-8">
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-1">
                 {t('adityaSolarServices.heroSection.title')}
               </h3>
@@ -259,6 +261,12 @@ export default function AdityaSolarServices({ setClick, setTermuse }) {
                 >
                   {isSubmitting ? 'Submitting...' : t('adityaSolarServices.form.button')}
                 </button>
+              </div>
+            </div>
+            
+              {/* Why Choose Us Carousel */}
+              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                <WhyChooseUsImageCarousel />
               </div>
             </div>
           </div>

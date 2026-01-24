@@ -13,5 +13,6 @@ import ContactUs from "./ContactUs.jsx";
 import HeroScrollContent from "./AutoScrollSection.jsx";
 import VideoCarousel from "./VideoCarousel.jsx";
 import CustomAlert from "./CustomAlert.jsx";
+import WhyChooseUsImageCarousel from "./WhyChooseUsImageCarousel.jsx";
 
-export { AdityaSolarServices, PrivacyPolicy, TermsOfUse, ContactUs, SolarSquarePromo, ModernSolarFAQ, Footer, Header, SolarTimeline, SolarBuyingGuide, OnGridSolarSystem, Services, HeroScrollContent, VideoCarousel, CustomAlert };
+export { AdityaSolarServices, PrivacyPolicy, TermsOfUse, ContactUs, SolarSquarePromo, ModernSolarFAQ, Footer, Header, SolarTimeline, SolarBuyingGuide, OnGridSolarSystem, Services, HeroScrollContent, VideoCarousel, CustomAlert, WhyChooseUsImageCarousel };

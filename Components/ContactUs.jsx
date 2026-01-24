@@ -310,7 +310,7 @@ export default function ContactUs() {
           </div>
           <div className="relative w-full h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d70436.43592912049!2d76.78887563043867!3d21.030297351475575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjHCsDAyJzM3LjIiTiA3NsKwNTAnNDcuMyJF!5e0!3m2!1sen!2sin!4v1760686481183!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.141074508927!2d76.83097657750038!3d21.027040537896106!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd71592b347d73b%3A0x3f10955c6264a063!2sAditya%20Solar%20Energy!5e0!3m2!1sen!2sin!4v1768731407817!5m2!1sen!2sin"
               className="absolute top-0 left-0 w-full h-full"
               style={{ border: 0 }}
               allowFullScreen=""

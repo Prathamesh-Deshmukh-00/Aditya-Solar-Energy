@@ -189,7 +189,7 @@ function Footer() {
         <div className="border-t border-gray-800 pt-6 sm:pt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 text-sm">
             <p className="text-gray-400 text-center sm:text-left">
-              © 2025 Aditya Solar Energy. All rights reserved.
+              © 2026 Aditya Solar Energy. All rights reserved.
             </p>
             <p className="text-gray-500 text-center sm:text-right">
               Powering a sustainable future

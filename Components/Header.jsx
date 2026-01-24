@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   Phone,
   Menu,
@@ -9,7 +10,6 @@ import {
   Briefcase,
   PhoneCall,
   Book,
-  Sun,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
@@ -54,11 +54,8 @@ function Header() {
             onClick={() => router.push("/")}
             className="flex items-center space-x-3 cursor-pointer group transition-transform hover:scale-105 duration-300"
           >
-            <div className="relative">
-              <div className="w-12 h-12 bg-gradient-to-br from-orange-400 to-yellow-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:rotate-180 transition-transform duration-500">
-                <Sun className="w-7 h-7 text-white" />
-              </div>
-              <div className="absolute inset-0 bg-orange-400 rounded-full blur-md opacity-30 group-hover:opacity-50 transition-opacity"></div>
+            <div className="relative w-12 h-12 flex items-center justify-center">
+                <Image src="/logo.png" alt="Aditya Solar Energy Logo" width={48} height={48} className="w-full h-full object-contain" />
             </div>
             <div>
               <h1 className="text-lg md:text-xl font-bold tracking-tight bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">

@@ -38,7 +38,7 @@ export default function TermsOfUse({setTermuse}) {
       Aditya Solar Energy
     </p>
     <p className="text-center text-orange-100 mt-2 text-sm sm:text-base">
-      Effective Date: October 12, 2025
+      Effective Date: January 01, 2026
     </p>
   </div>
 </div>

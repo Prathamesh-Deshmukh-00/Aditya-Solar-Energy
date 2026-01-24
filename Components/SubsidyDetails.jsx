@@ -10,9 +10,10 @@ export default function SolarSquarePromo() {
   const { t } = useTranslation();
 
   const pricingRows = [
-    { size: "3kW", installment: "₹2,165", savings: "₹3,600+" },
-    { size: "4kW", installment: "₹2,513", savings: "₹4,800+" },
-    { size: "5kW", installment: "₹2,803", savings: "₹6,000+" },
+    { size: "3kW", installment: "₹1,900", savings: "₹3,600+" },
+    { size: <>3.4kW <span className="text-[10px] sm:text-xs font-normal text-gray-500">(Recommended)</span></>, installment: "₹2,000", savings: "₹4,000+" },
+    { size: "4kW", installment: "₹2,400", savings: "₹4,800+" },
+    { size: "5kW", installment: "₹3,500", savings: "₹6,000+" },
   ];
 
   return (

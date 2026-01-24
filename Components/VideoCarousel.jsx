@@ -3,9 +3,11 @@
 import React, { useRef, useState, useEffect } from "react";
 // ❌ removed mp4 imports
 import SolarHome from "../Images/SolarHome.jpeg";
+import SolarBannerImage from "../Images/VideoBannerImage.png";
 
 // Get the correct src for Next.js image import
 const solarHomeSrc = typeof SolarHome === "string" ? SolarHome : SolarHome.src;
+const solarBannerImageSrc = typeof SolarBannerImage === "string" ? SolarBannerImage : SolarBannerImage.src;
 
 // Placeholder videos & images
 const videoData = [
@@ -19,21 +21,10 @@ const videoData = [
     // was: src : "/assets/SolarVideo.mp4", type :"video/mp4",
     src: "/assets/SolarVideo.mp4",
     type: "video/mp4",
-    poster: solarHomeSrc,
+    poster: solarBannerImageSrc,
     title: "How Solar Panels Work",
   },
-  {
-    // was: src: SolarVideoEnglish
-    src: "/assets/SolarVideoEnglish.mp4",
-    poster: solarHomeSrc,
-    title: "Maintenance Tips",
-  },
-  {
-    // was: src: video (SolarVideo.mp4)
-    src: "/assets/SolarVideo.mp4",
-    poster: solarHomeSrc,
-    title: "Benefits of Solar Energy",
-  },
+
 ];
 
 const VideoCarousel = () => {
